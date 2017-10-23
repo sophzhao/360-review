@@ -1,0 +1,37 @@
+<%= form_with(model: business_owner, local: true) do |form| %>
+  <% if business_owner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(business_owner.errors.count, "error") %> prohibited this business_owner from being saved:</h2>
+
+      <ul>
+      <% business_owner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_name %>
+    <%= form.text_field :user_name, id: :business_owner_user_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.text_field :password, id: :business_owner_password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business_name %>
+    <%= form.text_field :business_name, id: :business_owner_business_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :business_owner_email %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
