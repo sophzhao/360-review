@@ -1,8 +1,15 @@
 class BusinessOwnersController < ApplicationController
-  before_action :set_business_owner, only: [:show, :edit, :update, :destroy]
+  before_action :set_business_owner, only: [:show, :edit, :update, :destroy, :login]
 
   # GET /business_owners
   # GET /business_owners.json
+
+  def home
+  end
+
+  def login
+  end
+  
   def index
     @business_owners = BusinessOwner.all
   end
@@ -56,7 +63,7 @@ class BusinessOwnersController < ApplicationController
   def destroy
     @business_owner.destroy
     respond_to do |format|
-      format.html { redirect_to business_owners_url, notice: 'Business owner was successfully destroyed.' }
+      format.html { redirect_to @business_owner, notice: 'Business owner was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
