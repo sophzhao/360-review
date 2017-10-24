@@ -16,7 +16,7 @@ class AnalysisResult < ApplicationRecord
         # render :json => response.body
         puts response.body
         json_response = JSON.parse(response.body)
-
+        
     end
     
 end
