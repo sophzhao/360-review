@@ -5,6 +5,8 @@ class SentencesController < ApplicationController
   # GET /sentences.json
   def index
     @sentences = Sentence.all
+    # @sentence = Sentence.new
+    # @sentence = Sentence.run_api_analysis
   end
 
   # GET /sentences/1

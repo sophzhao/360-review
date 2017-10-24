@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Reviews</h1>
+<h1>Listing ALL Reviews</h1>
+<p class="supertiny">&nbsp;</p>
 
-<table>
-  <thead>
-    <tr>
+  <table class="datagrid">
+    <thead class="datagrid">
       <th>Source</th>
       <th>Content</th>
       <th>Username</th>
       <th>Date</th>
       <th>Rating</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <th>&nbsp;</th>
+    </thead>
 
   <tbody>
     <% @reviews.each do |review| %>
@@ -32,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Review', new_review_path %>
+<%= link_to 'Add a new review', new_review_path %>

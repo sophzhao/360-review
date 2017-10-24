@@ -1,9 +1,9 @@
-<p>This site is designed to inspire Klingon code warriors with a randomly selected quote from a collection of Klingon wisdom.  Today's quote of the day is as follows:</p>
+<p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+
+<h1>Home#index</h1>
+<h1><%= @review.source%></h1><br>
+<h1><%= @review.content%></h1><br>
+<p>Find me in app/views/home/index.html.erb</p>
+<%= link_to 'Add a new review to our list', new_review_path %>
 <p class="supertiny">&nbsp;</p>
-<h1><%= @proverb.klingon %></h1><br>
-<h2><%= @proverb.translation %></h2>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<%= link_to 'Add a new Klingon proverb to our list', new_proverb_path %>
-<p class="supertiny">&nbsp;</p>
-<%= link_to 'See all our Klingon proverbs here', proverbs_path %>
+<%= link_to 'See all our reviews here', reviews_path %>

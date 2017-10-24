@@ -30,3 +30,440 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 27ms (Views: 13.2ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAnalysisResults (20171024184257)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "analysis_results" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sentence_id" integer, "sentiment_label" varchar, "sentiment_score" float)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171024184257"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-10-24 15:11:47 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (Couldn't find IbmWatsonNluApiHelper, expected it to be defined in helpers/ibm_watson_nlu_api_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-10-24 15:13:53 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (Couldn't find IbmWatsonNluApiHelper, expected it to be defined in helpers/ibm_watson_nlu_api_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2017-10-24 15:14:46 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (Couldn't find IbmWatsonNluApiHelper, expected it to be defined in helpers/ibm_watson_nlu_api_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 15:15:49 -0400
+  
+ActionController::RoutingError (Couldn't find IbmWatsonNluApiHelper, expected it to be defined in helpers/ibm_watson_nlu_api_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 15:16:18 -0400
+  
+ActionController::RoutingError (Couldn't find IbmWatsonNluApiHelper, expected it to be defined in helpers/ibm_watson_nlu_api_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 15:16:39 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (Couldn't find IbmWatsonNluApiHelper, expected it to be defined in helpers/ibm_watson_nlu_api_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 15:17:06 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (Couldn't find IbmWatsonNluApiHelper, expected it to be defined in helpers/ibm_watson_nlu_api_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started POST "/__web_console/repl_sessions/056839a838f04b17dc38a7d74d45e55a/trace" for 127.0.0.1 at 2017-10-24 15:17:11 -0400
+Started GET "/" for 127.0.0.1 at 2017-10-24 15:19:32 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/syzhao/Documents/Senior/67-475 Innovation in Information Systems/360-review/app/models/review.rb:2: syntax error, unexpected ':', expecting keyword_end
+    has_many: sentences
+             ^
+/Users/syzhao/Documents/Senior/67-475 Innovation in Information Systems/360-review/app/models/review.rb:3: syntax error, unexpected ':', expecting keyword_end
+    belongs_to: business_owner
+               ^):
+  
+app/models/review.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/models/review.rb:3: syntax error, unexpected ':', expecting keyword_end
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-24 15:21:51 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `klingon' for nil:NilClass):
+    4: <p>Find me in app/views/home/index.html.erb</p>
+    5: 
+    6: <!-- <p class="supertiny">&nbsp;</p>
+    7: <h1><%= @proverb.klingon %></h1><br>
+    8: <h2><%= @proverb.translation %></h2>
+    9: <p>&nbsp;</p>
+   10: <p>&nbsp;</p>
+  
+app/views/home/index.html.erb:7:in `_app_views_home_index_html_erb___2584545079373459504_70106866648360'
+Started GET "/" for 127.0.0.1 at 2017-10-24 15:22:17 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1088ms (Views: 1060.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-24 15:24:40 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 338ms (Views: 307.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2017-10-24 15:27:03 -0400
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  Rendered reviews/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 57ms (Views: 50.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/businessowners" for 127.0.0.1 at 2017-10-24 15:28:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/businessowners"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/business_owners" for 127.0.0.1 at 2017-10-24 15:28:10 -0400
+Processing by BusinessOwnersController#index as HTML
+  Rendering business_owners/index.html.erb within layouts/application
+  [1m[36mBusinessOwner Load (0.5ms)[0m  [1m[34mSELECT "business_owners".* FROM "business_owners"[0m
+  Rendered business_owners/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 62ms (Views: 54.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-24 15:52:47 -0400
+Processing by HomeController#index as HTML
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 120ms (Views: 79.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-24 16:30:29 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 364ms (Views: 329.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-10-24 16:30:38 -0400
+  
+ActionController::RoutingError (uninitialized constant SentenceController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 16:32:08 -0400
+Processing by SentencesController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+  
+SyntaxError (/Users/syzhao/Documents/Senior/67-475 Innovation in Information Systems/360-review/app/models/sentence.rb:24: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/sentence.rb:24: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/sentences_controller.rb:8:in `index'
+Started GET "/sentences" for 127.0.0.1 at 2017-10-24 16:34:38 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SentencesController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/syzhao/Documents/Senior/67-475 Innovation in Information Systems/360-review/app/models/sentence.rb:24: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/sentence.rb:24: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/sentences_controller.rb:8:in `index'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 16:36:32 -0400
+  
+Started GET "/sentences" for 127.0.0.1 at 2017-10-24 16:36:42 -0400
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Processing by SentencesController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+SyntaxError (/Users/syzhao/Documents/Senior/67-475 Innovation in Information Systems/360-review/app/models/sentence.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/sentence.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/sentences_controller.rb:8:in `index'
+Started GET "/sentences" for 127.0.0.1 at 2017-10-24 16:38:10 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SentencesController#index as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :through. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :foreign_type, :dependent, :primary_key, :inverse_of, :required, :polymorphic, :touch, :counter_cache, :optional, :default):
+  
+app/models/sentence.rb:3:in `<class:Sentence>'
+app/models/sentence.rb:1:in `<top (required)>'
+app/controllers/sentences_controller.rb:8:in `index'
+Started GET "/sentences" for 127.0.0.1 at 2017-10-24 16:40:07 -0400
+Processing by SentencesController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+ArgumentError (Unknown key: :through. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :foreign_type, :dependent, :primary_key, :inverse_of, :required, :polymorphic, :touch, :counter_cache, :optional, :default):
+  
+app/models/sentence.rb:3:in `<class:Sentence>'
+app/models/sentence.rb:1:in `<top (required)>'
+app/controllers/sentences_controller.rb:8:in `index'
+Started GET "/sentences" for 127.0.0.1 at 2017-10-24 16:41:05 -0400
+Processing by SentencesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+SyntaxError (/Users/syzhao/Documents/Senior/67-475 Innovation in Information Systems/360-review/app/models/sentence.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/sentence.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/sentences_controller.rb:8:in `index'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 16:50:15 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/syzhao/Documents/Senior/67-475 Innovation in Information Systems/360-review/app/models/sentence.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/sentence.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/home_controller.rb:5:in `index'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 16:50:44 -0400
+Processing by HomeController#index as HTML
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.9ms)
+
+
+  
+SyntaxError (/Users/syzhao/Documents/Senior/67-475 Innovation in Information Systems/360-review/app/models/sentence.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/sentence.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/home_controller.rb:5:in `index'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 16:52:27 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.5ms)
+
+
+  
+ArgumentError (Unknown key: :through. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :foreign_type, :dependent, :primary_key, :inverse_of, :required, :polymorphic, :touch, :counter_cache, :optional, :default):
+  
+app/models/sentence.rb:3:in `<class:Sentence>'
+app/models/sentence.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:5:in `index'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 16:53:36 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mReview Load (1.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.4ms)
+
+
+  
+SyntaxError (/Users/syzhao/Documents/Senior/67-475 Innovation in Information Systems/360-review/app/models/analysis_result.rb:22: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/analysis_result.rb:22: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/home_controller.rb:5:in `index'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 16:54:00 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+Completed 500 Internal Server Error in 406ms (ActiveRecord: 1.6ms)
+
+
+  
+NoMethodError (undefined method `body' for nil:NilClass):
+  
+app/models/analysis_result.rb:18:in `block in run_api_analysis'
+app/models/analysis_result.rb:15:in `run_api_analysis'
+app/controllers/home_controller.rb:5:in `index'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 16:56:54 -0400
+Processing by HomeController#index as HTML
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+Completed 500 Internal Server Error in 730ms (ActiveRecord: 2.4ms)
+
+
+  
+NoMethodError (undefined method `body' for nil:NilClass):
+  
+app/models/analysis_result.rb:19:in `block in run_api_analysis'
+app/models/analysis_result.rb:15:in `run_api_analysis'
+app/controllers/home_controller.rb:5:in `index'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 17:10:31 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+LoadError (cannot load such file -- rest-client):
+  
+app/controllers/application_controller.rb:5:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:1:in `<top (required)>'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 17:13:08 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/syzhao/Documents/Senior/67-475 Innovation in Information Systems/360-review/app/models/analysis_result.rb:20: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/models/analysis_result.rb:20: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/home" for 127.0.0.1 at 2017-10-24 17:14:02 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 381ms
+
+
+  
+ActionView::Template::Error (undefined method `source' for nil:NilClass):
+    1: <p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+    2: 
+    3: <h1>Home#index</h1>
+    4: <h1><%= @review.source%></h1><br>
+    5: <h1><%= @review.content%></h1><br>
+    6: <p>Find me in app/views/home/index.html.erb</p>
+    7: <%= link_to 'Add a new review to our list', new_review_path %>
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__3691047998471522882_70178739709220'
