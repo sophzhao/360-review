@@ -6771,6 +6771,7 @@ button.close {
 #dashboard .sub-header {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
+  text-align: left;
 }
 
 /*
@@ -6838,6 +6839,7 @@ button.close {
 }
 #dashboard .main .page-header {
   margin-top: 0;
+  text-align: left;
 }
 
 
@@ -6865,5 +6867,18 @@ button.close {
 }
 
 #dashboard {
-  background-color: white;
+  background-color: white !important;
+}
+
+#dashboard table {
+  text-align: left;
+}
+
+#login{
+  padding-top: 150px;
+}
+
+#dashboard {
+  color: #333;
+  font-weight: normal;
 }
