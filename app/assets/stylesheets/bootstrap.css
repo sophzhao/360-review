@@ -6863,3 +6863,7 @@ button.close {
 #dashboard #filter {
   margin-top: 50px
 }
+
+#dashboard {
+  background-color: white;
+}

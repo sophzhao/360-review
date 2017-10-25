@@ -5,11 +5,15 @@ class AnalysisResultsController < ApplicationController
   # GET /analysis_results.json
   def index
     @analysis_results = AnalysisResult.all
+    @positive = AnalysisResult.positive.all
+    @negative = AnalysisResult.negative.all
   end
 
   # GET /analysis_results/1
   # GET /analysis_results/1.json
   def show
+    @positive = AnalysisResult.positive.all
+    @negative = AnalysisResult.negative.all
   end
 
   # GET /analysis_results/new
