@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get 'login' => 'business_owners#login'
 
-    get 'index' => 'business_owners#index'
+  get 'index' => 'business_owners#index'
 
 
 
