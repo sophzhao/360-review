@@ -12,6 +12,8 @@ class BusinessOwnersController < ApplicationController
   
   def index
     @business_owners = BusinessOwner.all
+    @positive = AnalysisResult.positive.all
+    @negative = AnalysisResult.negative.all
   end
 
   # GET /business_owners/1

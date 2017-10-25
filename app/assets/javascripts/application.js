@@ -12,5 +12,6 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require bootstrap.min
+//= require bootstrap.min.js
+//= require bootstrap.js
 //= require_tree .
