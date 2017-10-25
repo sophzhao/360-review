@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :analysis_results
   resources :sentences
   resources :reviews
   resources :business_owners
@@ -7,7 +8,7 @@ Rails.application.routes.draw do
 
   get 'login' => 'business_owners#login'
 
-    get 'index' => 'business_owners#index'
+  get 'index' => 'business_owners#index'
 
 
 
