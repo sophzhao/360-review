@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sentence:</strong>
+  <%= @analysis_result.sentence_id %>
+</p>
+
+<p>
+  <strong>Sentiment label:</strong>
+  <%= @analysis_result.sentiment_label %>
+</p>
+
+<p>
+  <strong>Sentiment score:</strong>
+  <%= @analysis_result.sentiment_score %>
+</p>
+
+<%= link_to 'Edit', edit_analysis_result_path(@analysis_result) %> |
+<%= link_to 'Back', analysis_results_path %>

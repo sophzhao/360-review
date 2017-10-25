@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :analysis_results
   resources :sentences
   resources :reviews
   resources :business_owners
