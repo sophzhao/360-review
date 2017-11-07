@@ -6897,6 +6897,15 @@ button.close {
 
 }
 
+#dashboard body{
+  background-color: #fff !important;
+}
+
+html {
+  background-color: #fff !important;
+}
+
+
 #negative .panel-body {
   text-align: left;
 }
@@ -6911,7 +6920,7 @@ button.close {
 }
 
 #negative .panel-default:hover {
-  background-color: #337ab7;
+  background-color: #848484;
 }
 
 #negative .panel-default {
@@ -6923,7 +6932,7 @@ button.close {
 }
 
 #positive .panel-default:hover {
-  background-color: #337ab7;
+  background-color: #848484;
 }
 
 
@@ -6935,3 +6944,15 @@ button.close {
    color: #000;
        text-decoration: none;
 }
+
+footer {
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin-top: 30px;
+  background-color: #101010;
+  padding: 50px;
+  color: #fff;
+  position: absolute;
+}
+
