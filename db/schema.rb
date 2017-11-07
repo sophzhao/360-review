@@ -12,12 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20171024184257) do
 
-  create_table "analysis_results", force: :cascade do |t|
-    t.integer "sentence_id"
-    t.string "sentiment_label"
-    t.float "sentiment_score"
-  end
-
   create_table "business_owners", force: :cascade do |t|
     t.string "user_name"
     t.string "password"
@@ -41,6 +35,8 @@ ActiveRecord::Schema.define(version: 20171024184257) do
   create_table "sentences", force: :cascade do |t|
     t.string "review_id"
     t.string "sentence_content"
+    t.string "sentiment_label"
+    t.float "sentiment_score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
