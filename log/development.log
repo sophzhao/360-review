@@ -467,3 +467,383 @@ ActionView::Template::Error (undefined method `source' for nil:NilClass):
     7: <%= link_to 'Add a new review to our list', new_review_path %>
   
 app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__3691047998471522882_70178739709220'
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:38:51 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 868ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `source' for nil:NilClass):
+    1: <p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+    2: 
+    3: <h1>Home#index</h1>
+    4: <h1><%= @review.source%></h1><br>
+    5: <h1><%= @review.content%></h1><br>
+    6: <p>Find me in app/views/home/index.html.erb</p>
+    7: <%= link_to 'Add a new review to our list', new_review_path %>
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__1145647342257745332_70361121925160'
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:39:02 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 349ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `source' for nil:NilClass):
+    1: <p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+    2: 
+    3: <h1>Home#index</h1>
+    4: <h1><%= @review.source%></h1><br>
+    5: <h1><%= @review.content%></h1><br>
+    6: <p>Find me in app/views/home/index.html.erb</p>
+    7: <%= link_to 'Add a new review to our list', new_review_path %>
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__1145647342257745332_70361149755780'
+Started GET "/index" for 127.0.0.1 at 2017-10-29 15:39:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/home" for 127.0.0.1 at 2017-10-29 15:39:12 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 659ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `source' for nil:NilClass):
+    1: <p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+    2: 
+    3: <h1>Home#index</h1>
+    4: <h1><%= @review.source%></h1><br>
+    5: <h1><%= @review.content%></h1><br>
+    6: <p>Find me in app/views/home/index.html.erb</p>
+    7: <%= link_to 'Add a new review to our list', new_review_path %>
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__1145647342257745332_70361150482600'
+Started GET "/reviews" for 127.0.0.1 at 2017-10-29 15:39:41 -0400
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  Rendered reviews/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 339ms (Views: 308.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/review" for 127.0.0.1 at 2017-10-29 15:39:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/review"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/reviews" for 127.0.0.1 at 2017-10-29 15:39:44 -0400
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  Rendered reviews/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 208ms (Views: 204.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-10-29 15:39:48 -0400
+Processing by HomeController#index as HTML
+Started GET "/home" for 127.0.0.1 at 2017-10-29 15:39:48 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 461ms (ActiveRecord: 0.0ms)
+
+
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 481ms (ActiveRecord: 0.0ms)
+
+
+  
+  
+ActionView::Template::Error (undefined method `source' for nil:NilClass):
+ActionView::Template::Error (undefined method `source' for nil:NilClass):
+    1: <p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+    2: 
+    3: <h1>Home#index</h1>
+    4: <h1><%= @review.source%></h1><br>
+    5: <h1><%= @review.content%></h1><br>
+    6: <p>Find me in app/views/home/index.html.erb</p>
+    7: <%= link_to 'Add a new review to our list', new_review_path %>
+    1: <p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+    2: 
+    3: <h1>Home#index</h1>
+    4: <h1><%= @review.source%></h1><br>
+    5: <h1><%= @review.content%></h1><br>
+    6: <p>Find me in app/views/home/index.html.erb</p>
+    7: <%= link_to 'Add a new review to our list', new_review_path %>
+  
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__1145647342257745332_70361125489980'
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__1145647342257745332_70361125489980'
+Started GET "/home" for 127.0.0.1 at 2017-10-29 15:43:03 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 783ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `source' for nil:NilClass):
+    1: <p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+    2: 
+    3: <h1>Home#index</h1>
+    4: <h1><%= @review.source%></h1><br>
+    5: <h1><%= @review.content%></h1><br>
+    6: <p>Find me in app/views/home/index.html.erb</p>
+    7: <%= link_to 'Add a new review to our list', new_review_path %>
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__1354184043674117010_70145135376340'
+Started GET "/home" for 127.0.0.1 at 2017-10-29 15:43:45 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (14.2ms)
+Completed 500 Internal Server Error in 812ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `source' for nil:NilClass):
+    1: <p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+    2: 
+    3: <h1>Home#index</h1>
+    4: <h1><%= @review.source%></h1><br>
+    5: <h1><%= @review.content%></h1><br>
+    6: <p>Find me in app/views/home/index.html.erb</p>
+    7: <%= link_to 'Add a new review to our list', new_review_path %>
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__577713820882182977_70098562769020'
+Started GET "/home" for 127.0.0.1 at 2017-10-29 15:46:06 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 1365ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `source' for nil:NilClass):
+    1: <p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+    2: 
+    3: <h1>Home#index</h1>
+    4: <h1><%= @review.source%></h1><br>
+    5: <h1><%= @review.content%></h1><br>
+    6: <p>Find me in app/views/home/index.html.erb</p>
+    7: <%= link_to 'Add a new review to our list', new_review_path %>
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__1222334439041513689_70214905559620'
+Started GET "/home" for 127.0.0.1 at 2017-10-29 15:47:07 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 353ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `source' for nil:NilClass):
+    1: <p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+    2: 
+    3: <h1>Home#index</h1>
+    4: <h1><%= @review.source%></h1><br>
+    5: <h1><%= @review.content%></h1><br>
+    6: <p>Find me in app/views/home/index.html.erb</p>
+    7: <%= link_to 'Add a new review to our list', new_review_path %>
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__1490055743368876629_70169041862380'
+Started GET "/" for 127.0.0.1 at 2017-10-29 15:54:03 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `to' for #<Class:0x00007fa63f4cf6c0>):
+  
+app/models/analysis_result.rb:2:in `<class:AnalysisResult>'
+app/models/analysis_result.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/home" for 127.0.0.1 at 2017-10-29 15:54:06 -0400
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `to' for #<Class:0x00007fa63c518918>):
+  
+app/models/analysis_result.rb:2:in `<class:AnalysisResult>'
+app/models/analysis_result.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/home" for 127.0.0.1 at 2017-10-29 15:56:19 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :through. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :foreign_type, :dependent, :primary_key, :inverse_of, :required, :polymorphic, :touch, :counter_cache, :optional, :default):
+  
+app/models/analysis_result.rb:3:in `<class:AnalysisResult>'
+app/models/analysis_result.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/home" for 127.0.0.1 at 2017-10-29 15:58:40 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :through. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :foreign_type, :dependent, :primary_key, :inverse_of, :required, :polymorphic, :touch, :counter_cache, :optional, :default):
+  
+app/models/analysis_result.rb:3:in `<class:AnalysisResult>'
+app/models/analysis_result.rb:1:in `<top (required)>'
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/home" for 127.0.0.1 at 2017-10-29 15:58:53 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.7ms)
+Completed 500 Internal Server Error in 419ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `source' for nil:NilClass):
+    1: <p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+    2: 
+    3: <h1>Home#index</h1>
+    4: <h1><%= @review.source%></h1><br>
+    5: <h1><%= @review.content%></h1><br>
+    6: <p>Find me in app/views/home/index.html.erb</p>
+    7: <%= link_to 'Add a new review to our list', new_review_path %>
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__4404145979738612818_70157046884380'
+Started GET "/home" for 127.0.0.1 at 2017-10-29 16:02:15 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 1107ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `source' for nil:NilClass):
+    1: <p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+    2: 
+    3: <h1>Home#index</h1>
+    4: <h1><%= @review.source%></h1><br>
+    5: <h1><%= @review.content%></h1><br>
+    6: <p>Find me in app/views/home/index.html.erb</p>
+    7: <%= link_to 'Add a new review to our list', new_review_path %>
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__2173981542741391832_70223180926380'
+Started GET "/" for 127.0.0.1 at 2017-10-31 13:28:57 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/syzhao/Documents/Senior/67-475 Innovation in Information Systems/360-review/app/models/analysis_result.rb:25: syntax error, unexpected ')', expecting '='
+timent_label, sentiment_score)
+                              ^):
+  
+app/models/analysis_result.rb:25: syntax error, unexpected ')', expecting '='
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-31 13:30:08 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 748ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `source' for nil:NilClass):
+    1: <p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+    2: 
+    3: <h1>Home#index</h1>
+    4: <h1><%= @review.source%></h1><br>
+    5: <h1><%= @review.content%></h1><br>
+    6: <p>Find me in app/views/home/index.html.erb</p>
+    7: <%= link_to 'Add a new review to our list', new_review_path %>
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__1936599518571149636_70166303431820'
+Started GET "/" for 127.0.0.1 at 2017-10-31 13:31:17 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 688ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `source' for nil:NilClass):
+    1: <p>This site is designed to show results from IBM Watson Natural Language Understanding API</p>
+    2: 
+    3: <h1>Home#index</h1>
+    4: <h1><%= @review.source%></h1><br>
+    5: <h1><%= @review.content%></h1><br>
+    6: <p>Find me in app/views/home/index.html.erb</p>
+    7: <%= link_to 'Add a new review to our list', new_review_path %>
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb__1936599518571149636_70166302088460'
