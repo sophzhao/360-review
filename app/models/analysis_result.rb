@@ -1,9 +1,5 @@
 class AnalysisResult < ApplicationRecord
-    belongs_to :sentence
-
-    # add api things 
-    # create methods with requests
-    # create new analysis results (add to db)
+ belongs_to :sentence
 
     require 'rest-client'
     require 'json'
