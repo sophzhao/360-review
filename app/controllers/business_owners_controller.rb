@@ -12,6 +12,7 @@ class BusinessOwnersController < ApplicationController
   
   def index
     @business_owners = BusinessOwner.all
+    @sentence = AnalysisResult.positive.all
     @positive = AnalysisResult.positive.all
     @negative = AnalysisResult.negative.all
   end

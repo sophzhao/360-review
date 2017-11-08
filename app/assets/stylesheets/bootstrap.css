@@ -6829,12 +6829,12 @@ button.close {
  */
 
 #dashboard .main {
-  padding: 20px;
+  
 }
 @media (min-width: 768px) {
   #dashboard .main {
     padding-right: 40px;
-    padding-left: 40px;
+    
   }
 }
 #dashboard .main .page-header {
@@ -6849,10 +6849,14 @@ button.close {
 
 #dashboard .placeholders {
   margin-bottom: 30px;
-  text-align: center;
+  
 }
-#dashboard .placeholders h4 {
+#dashboard .placeholders h2 {
   margin-bottom: 0;
+  margin-left: 27px;
+  display: block;
+  text-align: left;
+  float: left;
 }
 #dashboard .placeholder {
   margin-bottom: 20px;
@@ -6860,10 +6864,15 @@ button.close {
 #dashboard .placeholder img {
   display: inline-block;
   border-radius: 50%;
+  float: left;
+  margin-top: 20px;
+  margin-left: 14px;
 }
 
 #dashboard #filter {
-  margin-top: 50px
+  margin-top: 50px;
+  margin-left: 0px;
+  padding: 0;
 }
 
 #dashboard {
@@ -6882,3 +6891,68 @@ button.close {
   color: #333;
   font-weight: normal;
 }
+
+#negative a {
+  color: black;
+
+}
+
+#dashboard body{
+  background-color: #fff !important;
+}
+
+html {
+  background-color: #fff !important;
+}
+
+
+#negative .panel-body {
+  text-align: left;
+}
+
+#positive .panel-body {
+  text-align: left;
+}
+
+#negative a:hover {
+   color: #000;
+       text-decoration: none;
+}
+
+#negative .panel-default:hover {
+  background-color: #848484;
+}
+
+#negative .panel-default {
+  background-color: #ddd;
+}
+
+#positive .panel-default {
+  background-color: #ddd;
+}
+
+#positive .panel-default:hover {
+  background-color: #848484;
+}
+
+
+#positive a {
+  color: black;
+}
+
+#positive a:hover {
+   color: #000;
+       text-decoration: none;
+}
+
+footer {
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin-top: 30px;
+  background-color: #101010;
+  padding: 50px;
+  color: #fff;
+  position: absolute;
+}
+
