@@ -1,0 +1,1 @@
+INSERT INTO business_owners (user_name, password, business_name, email) VALUES ('business_owner_1', 'pword', 'Noodlehead', 'owner@email.com');
