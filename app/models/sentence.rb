@@ -3,4 +3,6 @@ class Sentence < ApplicationRecord
     has_many :business_owners, through: :review
 
     
+
+    
 end
