@@ -10,39 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171025004558) do
-
-  create_table "analysis_results", force: :cascade do |t|
-    t.integer "sentence_id"
-    t.string "sentiment_label"
-    t.float "sentiment_score"
-  end
+ActiveRecord::Schema.define(version: 20171114104122) do
 
   create_table "business_owners", force: :cascade do |t|
     t.string "user_name"
     t.string "password"
     t.string "business_name"
     t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.integer "category_id"
+    t.integer "sentence_id"
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string "business_owner_id"
+    t.integer "business_owner_id"
     t.string "source"
     t.string "content"
     t.string "username"
     t.date "date"
     t.integer "rating"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  end
+
+  create_table "sentence_categories", force: :cascade do |t|
+    t.string "category_name"
   end
 
   create_table "sentences", force: :cascade do |t|
-    t.string "review_id"
+    t.integer "review_id"
     t.string "sentence_content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "sentiment_label"
+    t.float "sentiment_score"
+    t.boolean "saved", default: false
   end
 
 end

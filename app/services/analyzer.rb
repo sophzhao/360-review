@@ -1,11 +1,12 @@
 class Analyzer
+    require 'rest-client'
+    require 'json'
 
-    def initializer(sentence_object)
+    def initialize(sentence_object)
 
     end
 
     def run_api_analysis()
-        url = self.sentence_content
 
         fake_sentence_id = 1
 
