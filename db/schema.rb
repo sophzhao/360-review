@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171114104122) do
+ActiveRecord::Schema.define(version: 20171114162123) do
 
   create_table "business_owners", force: :cascade do |t|
     t.string "user_name"
@@ -43,6 +43,11 @@ ActiveRecord::Schema.define(version: 20171114104122) do
     t.string "sentiment_label"
     t.float "sentiment_score"
     t.boolean "saved", default: false
+  end
+
+  create_table "similar_sentences", force: :cascade do |t|
+    t.integer "sentence_id_1"
+    t.integer "sentence_id_2"
   end
 
 end
