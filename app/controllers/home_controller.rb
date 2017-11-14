@@ -1,11 +1,6 @@
 class HomeController < ApplicationController
 
     def index
-        # (sentence_id, sentiment_label, sentiment_score) = AnalysisResult.run_api_analysis
-        # @new_analysis_result = AnalysisResult.new
-        # @new_analysis_result.sentence_id = sentence_id
-        # @new_analysis_result.sentiment_label = sentiment_label
-        # @new_analysis_result.sentiment_score = sentiment_score
 
         example_sentence = Sentence.new()
         example_sentence.review_id = 1
@@ -20,6 +15,7 @@ class HomeController < ApplicationController
 
         sentence_analyzer = Analyzer.new(example_sentence)
         sentence_analyzer.run_api_analysis()
+        example_sentence.save!
 
     end
     

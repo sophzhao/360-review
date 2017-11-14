@@ -16,8 +16,6 @@ ActiveRecord::Schema.define(version: 20171025004558) do
     t.integer "sentence_id"
     t.string "sentiment_label"
     t.float "sentiment_score"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "business_owners", force: :cascade do |t|
