@@ -10,6 +10,12 @@ Rails.application.routes.draw do
 
   get 'index' => 'business_owners#index'
 
+  get 'about' => 'business_owners#about'
+
+  get 'home', to: 'home#index', as: :home
+  root 'home#index'
+
+
 
 
 

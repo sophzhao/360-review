@@ -6,7 +6,6 @@ class CreateBusinessOwners < ActiveRecord::Migration[5.1]
       t.string :business_name
       t.string :email
 
-      t.timestamps
     end
   end
 end
