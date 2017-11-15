@@ -15,10 +15,6 @@ Rails.application.routes.draw do
   get 'home', to: 'home#index', as: :home
   root 'home#index'
 
-
-
-
-
 #   get "business_owners/hello" => "your-controller#your/action"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

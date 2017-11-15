@@ -29,5 +29,4 @@ class Sentence < ApplicationRecord
     		return result
     	end
     end
-
 end
