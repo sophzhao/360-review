@@ -65,6 +65,7 @@
 
               <%= image_tag("noodlehead.jpeg", :width => "200", :height => "200") %>
               <br><br><br><br><br><br><br><br><br><br><br><br><h2>Noodlehead</h2>
+              <div id="overallscore">Overall Score: <%= @sentence.overallScore %></div>
             </div>
             </div>
           </div>
@@ -164,7 +165,7 @@
                       <% @positive.each do |sentiment| %>
                       <a href="#"><div class="panel panel-default">
                       <div class="panel-body">
-                      <%= sentiment.sentence.sentence_content %><br><br>
+                      <%= sentiment.sentence_content %><br><br>
                       <%= sentiment.sentiment_score %>
                     </div></a>
                   </div>
@@ -180,7 +181,7 @@
                       <% @negative.each do |sentiment| %>
                       <a href="#"><div class="panel panel-default">
                       <div class="panel-body">
-                      <%= sentiment.sentence.sentence_content %><br><br>
+                      <%= sentiment.sentence_content %><br><br>
                       <%= sentiment.sentiment_score %>
                     </div></a>
                   </div>
