@@ -6954,5 +6954,12 @@ footer {
   padding: 50px;
   color: #fff;
   position: absolute;
+  text-align: center;
+}
+
+#overallscore {
+  text-align: left !important;
+  margin: 0px;
+  border-width: 1px;
 }
 
