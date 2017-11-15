@@ -1087,6 +1087,7 @@ body {
   line-height: 1.42857143;
   color: #333;
   background-color: #fff;
+
 }
 input,
 button,
@@ -1126,6 +1127,10 @@ img {
 }
 .img-rounded {
   border-radius: 6px;
+}
+
+.rounded {
+  border-radius: 100px;
 }
 .img-thumbnail {
   display: inline-block;
@@ -6959,7 +6964,30 @@ footer {
 
 #overallscore {
   text-align: left !important;
-  margin: 0px;
-  border-width: 1px;
+  margin-left: 20px;
 }
+
+.home, .text {
+  text-align: center;
+  margin: 15px 100px
+}
+
+.home {
+  margin-top: 150px;
+}
+
+.text {
+  font-size: 18px;
+  margin-bottom: 100px;
+}
+
+.features{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
 

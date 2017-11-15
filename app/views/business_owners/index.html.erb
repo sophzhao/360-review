@@ -43,7 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">360-Review</a>
+          <a class="navbar-brand" href="business_owners">360-Review</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -64,11 +64,17 @@
               <div id="image">
 
               <%= image_tag("noodlehead.jpeg", :width => "200", :height => "200") %>
-              <br><br><br><br><br><br><br><br><br><br><br><br><h2>Noodlehead</h2>
-              <div id="overallscore">Overall Score: <%= @sentence.overallScore %></div>
+              <br><br><br><br><br><br><br><br><br><br><br><h2>Noodlehead</h2>
+              
             </div>
+            <br><br><br>
+            <div id="overallscore">
+                <b>Overall Sentiment Score: <%= @sentence.overallScore %></b>
+                </div>
             </div>
           </div>
+
+
 
           <div id="filter">
           <div class="col-sm-3 col-md-3 main">
