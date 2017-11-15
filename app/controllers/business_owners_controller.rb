@@ -12,9 +12,9 @@ class BusinessOwnersController < ApplicationController
   
   def index
     @business_owners = BusinessOwner.all
-    @sentence = AnalysisResult.positive.all
-    @positive = AnalysisResult.positive.all
-    @negative = AnalysisResult.negative.all
+    @sentence = Sentence.positive.all
+    @positive = Sentence.positive.rankpos.all
+    @negative = Sentence.negative.rankneg.all
   end
 
   # GET /business_owners/1

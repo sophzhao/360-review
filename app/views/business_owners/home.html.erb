@@ -20,7 +20,7 @@
     <!-- Custom styles for this template -->
     <!-- <link href="/Users/avnipherwani/360-review/app/assets/stylesheets/cover.css" rel="stylesheet"> -->
 
-<%= stylesheet_link_tag :cover %>
+    <link href="carousel.css" rel="stylesheet">
 
 
     
@@ -30,56 +30,81 @@
 
   </head>
   
-  <body background-image: img src="/img.jpg" alt="rss feed" />
+  <body>
 
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <nav>
-                
-              </nav>
-            </div>
-          </div>
-
-          <div class="inner cover">
-            <h1 class="cover-heading" style="font-size: 50px;top: 20px; position: absolute;left: 100px;">360-REVIEW</h1>
-            <ul class="nav navbar-nav navbar-right" style="margin: -240px -350px 50px 0px;">
-            <li><a href="../navbar/">Welcome</a></li>
-            <li><a href="../navbar-static-top/">About</a></li>
-            <li class="active"><a href="./">More<span class="sr-only">(current)</span></a></li>
-          </ul>
-            <p class="lead" style="font-size: 35px; white-space: nowrap; text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
-">CUSTOMER REVIEWS. ANALYZE. GENERATE VALUE</p>
-            <br>
-            <br>
-            <p class="lead">
-              <a href="about" class="btn btn-lg btn-default" style="a: active:background-color: white; margin: 50px;">What we do</a>
-
-
-         <a href="login" class="btn btn-lg btn-default">Login/Signup</a>
-
-            </p>
-          </div>
-
-          </div>
-
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">360-Review</a>
         </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
+
+           <%= image_tag("home.jpg", :alt => "home image", :class => "first-slide") %>
+          <div class="container">
+            
+              <h1>CUSTOMER REVIEWS. ANALYSIS. VALUE</h1>
+          <h3>Instant access to real time restaurant sentiment analysis</h3>
+          <p><a class="btn btn-lg btn-primary" href="login" role="button">Login</a></p>
+            </div>
+          
+        
+
+            
+
+  <p>An application that utilizes sentiment analysis to provide businesses owners with clear common sentiments (both positive and negative) that surround their business.
+  Businesses operate to serve their customers, so there is value in catering to a customer’s specific needs as presented in the unadulterated form of online reviews. The stakeholders and users are the businesses analyzing their reviews and also, indirectly, the customers that businesses will serve. </p>
+
+
+
+    <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+    
      
 
-    </div>
-</a>
+    
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
