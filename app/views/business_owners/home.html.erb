@@ -37,7 +37,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">360-Review</a>
+          <a class="navbar-brand" href="welcome">360-Review</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -48,44 +48,51 @@
     </nav>
 
 
-           <%= image_tag("home.jpg", :alt => "home image", :class => "first-slide") %>
+           <%= image_tag("pic3.png", :alt => "home image", :class => "first-slide") %>
           <div class="container">
-            
-              <h1>CUSTOMER REVIEWS. ANALYSIS. VALUE</h1>
+            <div class="home">
+               <h1>360-REVIEW</h1>
+              <h2>CUSTOMER REVIEWS. ANALYZE. VALUE</h2>
           <h3>Instant access to real time restaurant sentiment analysis</h3>
+          <br>
           <p><a class="btn btn-lg btn-primary" href="login" role="button">Login</a></p>
+        </div>
             </div>
           
         
 
             
-
+  <div class="text">
   <p>An application that utilizes sentiment analysis to provide businesses owners with clear common sentiments (both positive and negative) that surround their business.
   Businesses operate to serve their customers, so there is value in catering to a customer’s specific needs as presented in the unadulterated form of online reviews. The stakeholders and users are the businesses analyzing their reviews and also, indirectly, the customers that businesses will serve. </p>
+</div>
+<hr>
 
 
 
     <!-- Three columns of text below the carousel -->
+    <div class="features">
       <div class="row">
         <div class="col-lg-4">
-          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
+          <%= image_tag("review.png", :alt => "home image", :class => "img-rounded") %>
+          <h2>Diverse Sources</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
+          <%= image_tag("analytics.png", :alt => "home image", :class => "img-rounded") %>
+          <h2>In-Depth Analytics</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
+          <%= image_tag("insight.png", :alt => "home image", :class => "rounded") %>
+          <h2>Unique Insights</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
+    </div>
 
     
      
@@ -104,4 +111,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
+   <footer>
+  &copy; Copyright 360-Review
+</footer>
 </html>
