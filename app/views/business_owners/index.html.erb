@@ -172,7 +172,7 @@
                       <a href="#"><div class="panel panel-default">
                       <div class="panel-body">
                       <%= sentiment.sentence_content %><br><br>
-                      <%= sentiment.sentiment_score %>
+                      <%= (((((sentiment.sentiment_score + 1)/2)*100)*100).round/100).to_s + '%' %>
                     </div></a>
                   </div>
                   <% end %>
@@ -188,7 +188,7 @@
                       <a href="#"><div class="panel panel-default">
                       <div class="panel-body">
                       <%= sentiment.sentence_content %><br><br>
-                      <%= sentiment.sentiment_score %>
+                      <%= (((((sentiment.sentiment_score.abs + 1)/2)*100)*100).round/100).to_s + '%' %>
                     </div></a>
                   </div>
                   <% end %>

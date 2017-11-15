@@ -17,13 +17,13 @@ class Sentence < ApplicationRecord
     		count = count + 1
     	end
     	percentage = score/count
-    	if score > 0
+    	if score >= 0
     		percentage = ((percentage + 1)/2)*100 
     		percentage = (percentage *100).round/100
     		result = percentage.to_s + '%'
     		return result
     	else
-    		percentage = ((percentage + 1)/2)*100
+    		percentage = ((percentage.abs + 1)/2)*100
     		percentage =(percentage *100).round/100 
     		result = percentage.to_s + '%'
     		return result
