@@ -70,6 +70,8 @@
             <br><br><br>
             <div id="overallscore">
                 <b>Overall Sentiment Score: <%= @sentence.overallScore %></b>
+                <br>
+                <b>Total Number of Reviews: <%= @sentence.numReviews %></b>
                 </div>
             </div>
           </div>
@@ -171,8 +173,12 @@
                       <% @positive.each do |sentiment| %>
                       <a href="#"><div class="panel panel-default">
                       <div class="panel-body">
-                      <%= sentiment.sentence_content %><br><br>
-                      <%= (((((sentiment.sentiment_score + 1)/2)*100)*100).round/100).to_s + '%' %>
+                      <%= sentiment.sentence_content %>
+                      <%= '(' +(((((sentiment.sentiment_score + 1)/2)*100)*100).round/100).to_s + '%'+')' %>
+                      <br>
+                      <%= sentiment.review.date.to_s + ','%>
+                      <%= sentiment.review.rating.to_s + ' stars' %>
+
                     </div></a>
                   </div>
                   <% end %>
@@ -187,8 +193,11 @@
                       <% @negative.each do |sentiment| %>
                       <a href="#"><div class="panel panel-default">
                       <div class="panel-body">
-                      <%= sentiment.sentence_content %><br><br>
-                      <%= (((((sentiment.sentiment_score.abs + 1)/2)*100)*100).round/100).to_s + '%' %>
+                      <%= sentiment.sentence_content %>
+                      <%= '(-'+(((((sentiment.sentiment_score.abs + 1)/2)*100)*100).round/100).to_s + '%' + ')' %>
+                      <br>
+                      <%= sentiment.review.date.to_s + ','%>
+                      <%= sentiment.review.rating.to_s + ' stars' %>
                     </div></a>
                   </div>
                   <% end %>
