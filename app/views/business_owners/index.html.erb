@@ -236,9 +236,6 @@
 
                 lineChartData.push({
                     date: new Date('1-' + months[i]),
-                    'Total Review Count': getReviewCount(cMonthData).length,
-                    'Total Sentence Count': cMonthData.length,
-                    'Total Positive Sentences': cPositive.length,
                     '% Positive Score': getPositivePercentage(cPositive, cMonthData),
                     'Average Sentiment Score': getAvgScoreCount(cMonthData)
                 });
