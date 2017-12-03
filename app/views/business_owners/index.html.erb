@@ -236,9 +236,11 @@
 
                 lineChartData.push({
                     date: new Date('1-' + months[i]),
+                    '% Avg Sentiment Score': getAvgScoreCount(cMonthData),
                     '% Positive Score': getPositivePercentage(cPositive, cMonthData),
-                    'Average Sentiment Score': getAvgScoreCount(cMonthData)
+                    'Total Review Count': cMonthData.length
                 });
+
             }
 
             window.lineChartData = lineChartData;
@@ -353,15 +355,56 @@
         }
 
         function getAvgScoreCount(cMonthData) {
-
             var totalScore = 0;
             for (var i = 0; i < cMonthData.length; i++) {
                 totalScore = totalScore + cMonthData[i]['Sentiment_Score'];
-            }
-
-            return (totalScore / (cMonthData.length));
-
+                if (totalScore > 0) {
+                  totalScore = (totalScore/ cMonthData.length)
+                  totalScore = ((totalScore + 1)/2)*100 
+                  totalScore = Math.round(totalScore *100)/100
+                  return totalScore
+                }
+                else {
+                  totalScore = (totalScore/ cMonthData.length)
+                  totalScore = ((Math.abs(totalScore) + 1)/2)*100 
+                  totalScore = Math.round(totalScore *100)/100
+                  return totalScore
+                }  
+            }  
         }
+
+        function getAvgScoreCount(cMonthData) {
+ 
+            var totalScore = 0;
+            for (var i = 0; i < cMonthData.length; i++) {
+              console.log(totalScore)
+                totalScore = totalScore + Math.abs(cMonthData[i]['Sentiment_Score']);
+                totalScore = (totalScore / (cMonthData.length));
+                console.log(totalScore)
+                
+            }
+            return totalScore;
+            
+        }
+
+        /*function getAvgScoreCount(cMonthData) {
+            var totalScore = 0;
+            for (var i = 0; i < cMonthData.length; i++) {
+                totalScore = totalScore + cMonthData[i]['Sentiment_Score'];
+                if (totalScore > 0) {
+                  totalScore = (totalScore/ cMonthData.length)
+                  totalScore = ((totalScore + 1)/2)*100 
+                  totalScore = Math.round(totalScore *100)/100
+                  return totalScore
+                }
+                else {
+                  totalScore = (totalScore/ cMonthData.length)
+                  totalScore = ((Math.abs(totalScore) + 1)/2)*100 
+                  totalScore = Math.round(totalScore *100)/100
+                  return totalScore
+                }  
+            }  
+        }*/
 
         function getPositivePercentage(cPositive, cMonthData) {
             if (cPositive.length > 0) {
