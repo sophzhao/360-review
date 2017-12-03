@@ -13,9 +13,11 @@ class BusinessOwnersController < ApplicationController
   def index
     @business_owners = BusinessOwner.all
     @sentence = Sentence.all
+    @reviews = Review.all 
     @positive = Sentence.positive.rankpos.all
     @negative = Sentence.negative.rankneg.all
-    @date = Review.last
+    @review = Review.all
+    
   end
 
   # GET /business_owners/1

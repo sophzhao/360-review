@@ -30,10 +30,31 @@ class Sentence < ApplicationRecord
     	end
     end
 
+    
 
-    def self.numReviews 
+
+
+    def self.numSentences 
         count = 0
         reviews = Sentence.all
+        reviews.each do |sentiment|
+            count = count + 1
+        end
+        return count
+    end
+
+    def self.numPositive 
+        count = 0
+        reviews = Sentence.positive.all
+        reviews.each do |sentiment|
+            count = count + 1
+        end
+        return count
+    end
+
+    def self.numNegative 
+        count = 0
+        reviews = Sentence.negative.all
         reviews.each do |sentiment|
             count = count + 1
         end
