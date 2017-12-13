@@ -14,8 +14,9 @@ class BusinessOwnersController < ApplicationController
     @business_owners = BusinessOwner.all
     @sentence = Sentence.all
     @reviews = Review.all 
-    @positive = Sentence.positive.rankpos.all
-    @negative = Sentence.negative.rankneg.all
+    @positive = Sentence.positive.rankdate.all
+    @negative = Sentence.negative.rankdate.all
+
     @review = Review.all
     
   end

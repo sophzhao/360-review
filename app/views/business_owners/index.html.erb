@@ -354,7 +354,7 @@
 
         }
 
-        function getAvgScoreCount(cMonthData) {
+        /*function getAvgScoreCount(cMonthData) {
             var totalScore = 0;
             for (var i = 0; i < cMonthData.length; i++) {
                 totalScore = totalScore + cMonthData[i]['Sentiment_Score'];
@@ -371,19 +371,18 @@
                   return totalScore
                 }  
             }  
-        }
+        }*/
 
         function getAvgScoreCount(cMonthData) {
  
             var totalScore = 0;
             for (var i = 0; i < cMonthData.length; i++) {
-              console.log(totalScore)
                 totalScore = totalScore + Math.abs(cMonthData[i]['Sentiment_Score']);
-                totalScore = (totalScore / (cMonthData.length));
-                console.log(totalScore)
+
                 
             }
-            return totalScore;
+            totalScore = (totalScore/ cMonthData.length) * 100
+            return totalScore
             
         }
 
@@ -728,17 +727,19 @@
           <h2 class="sub-header">Negative</h2>
                       
                       <% @negative.each do |sentiment| %>
-                      <a href="#"><div class="panel panel-default">
-                      <div class="panel-body">
-                      <%= sentiment.sentence_content %>
-                      <%= '(-'+(((((sentiment.sentiment_score.abs + 1)/2)*100)*100).round/100).to_s + '%' + ')' %>
-                      <br>
-                      <%= sentiment.review.date.strftime("%b %d, %Y")%>
-                      <br>
-                      <%= sentiment.review.rating.to_s + ' stars' %>
+                      
+                        <a href="#"><div class="panel panel-default">
+                        <div class="panel-body">
+                        <%= sentiment.sentence_content %>
+                        <%= '(-'+(((((sentiment.sentiment_score.abs + 1)/2)*100)*100).round/100).to_s + '%' + ')' %>
+                        <br>
+                        <%= sentiment.review.date.strftime("%b %d, %Y")%>
+                        <br>
+                        <%= sentiment.review.rating.to_s + ' stars' %>
+                      
                     </div></a>
                   </div>
-                  <% end %>
+                 <% end %>
           </div>
         </div>
 

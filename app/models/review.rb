@@ -2,7 +2,7 @@ class Review < ApplicationRecord
     has_many :sentences
     belongs_to :business_owner
 
-
+    
 
     def self.dates
         reviews = Review.all
