@@ -33,7 +33,7 @@
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
     <script type="text/javascript">
-
+      //data for dashboard graphs 
       var cData = `Sentence_ID,Review_ID,Date,Category,Sentiment_Score,Sentiment_Label
                     1,1,2/3/2017,Venue,0.90,positive
                     1,1,2/3/2017,Venue,0.80,positive
@@ -67,39 +67,27 @@
                     26,12,4/3/2015,Service,0.84,positive
                     26,12,4/3/2015,Food,0.84,positive`;
 
+
+        //splitting the date up
         function csvJSON(csv, separator) {
-
             if (!separator) separator = "\n";
-
             var lines = csv.split(separator);
-
             var result = [];
-
             var headers = lines[0].split(",");
-
             for (var i = 1; i < lines.length; i++) {
-
                 var obj = {};
                 var currentline = lines[i].split(",");
-
                 for (var j = 0; j < headers.length; j++) {
                     obj[String(headers[j]).trim()] = String(currentline[j]).trim();
                 }
-
                 result.push(obj);
-
             }
-
             //return result; //JavaScript object
             return JSON.stringify(result); //JSON
         }
 
-        //window.onresize = function () {
-        //    window.location.href = window.location.href;
-        //}
-              
+        //if date file being chosen  
         function handleFiles() {
-            //var selectedFile = document.getElementById('input').files[0];
             var file = document.getElementById("input").files[0];
             if (file) {
                 var reader = new FileReader();
@@ -115,17 +103,17 @@
 
         };
 
+        //rendering graphs
         function render() {
             renderGrid();
             onDocumentReady();
             renderlinechart()
         }
 
+        //setting up the layout of the graphs
         var renderGrid = function () {
-
             var height = window.innerHeight - 80;
             var width = (window.innerWidth / 2) - 20;
-
             document.getElementById('power-gauge').style.height = height + 'px';
             document.getElementById('chart').style.height = height + 'px';
             document.getElementById('power-gauge').style.width = width + 'px';
@@ -165,6 +153,7 @@
     </script>
     <script>
 
+        //if year options changed 
         function yearChanged() {
             var myselect = document.getElementById("trend");
             var opts = myselect.options;
@@ -186,7 +175,6 @@
                     return;
                 }
             }
-
             var option = document.createElement("option");
             option.text = year;
             option.value = year;
@@ -227,29 +215,22 @@
 
             //Prepare line chart data
             var lineChartData = [];
-
             for (var i = 0; i < months.length; i++) {
-
                 var cMonthData = data.filter(function (m) { return m.Date == months[i]; });
-
                 var cPositive = cMonthData.filter(function (m) { return String(m.Sentiment_Label).toLowerCase() == 'positive'; });
-
                 lineChartData.push({
                     date: new Date('1-' + months[i]),
                     '% Avg Sentiment Score': getAvgScoreCount(cMonthData),
                     '% Positive Score': getPositivePercentage(cPositive, cMonthData),
                     'Total Review Count': cMonthData.length
                 });
-
             }
-
             window.lineChartData = lineChartData;
 
             //Prepare gauge chart data.
 
             //Get for each year
             var years = []
-
             for (var i = 0; i < months.length; i++) {
                 var cy = months[i][months[i].length - 3] + months[i][months[i].length - 2] + months[i][months[i].length - 1];
                 if (years.indexOf(cy) < 0) {
@@ -258,7 +239,6 @@
             }
 
             var cats = [];
-
             for (var i = 0; i < data.length; i++) {
                 if (cats.indexOf(data[i]['Category']) < 0) {
                     cats.push(data[i]['Category']);
@@ -266,37 +246,25 @@
             }
 
             var yearlyCatdata = [];
-
             if (window.sYear == 'All') {
                 for (var i = 0; i < years.length; i++) {
-
                     var pyear = years[i] + '';
                     if (years[i].includes('-')) {
                         pyear = pyear.replace('-', '20');
                     }
-
                     bindYears(pyear);
                 }
             }
 
             if (window.sYear == 'All') {
-
                 var perCat = {};
-
                 perCat['Year'] = window.sYear;
-
                 var cYearData = data;
-
                 var cPositive = cYearData.filter(function (m) { return String(m.Sentiment_Label).toLowerCase() == 'positive'; });
-
                 perCat['Total % Positive'] = ((cPositive.length / cYearData.length) * 100).toFixed(2);
-
                 for (var j = 0; j < cats.length; j++) {
-
                     var cPos = cPositive.filter(function (m) { return m.Category == cats[j]; });
-
                     var cAll = cYearData.filter(function (m) { return m.Category == cats[j]; });
-
                     if (cPos.length > 0 && cAll.length > 0) {
                         perCat[cats[j] + ' % Positive'] = ((cPos.length / cAll.length) * 100).toFixed(2);
                     }
@@ -309,106 +277,52 @@
             }
             else {
                 for (var i = 0; i < years.length; i++) {
-
                     var perCat = {};
-
                     var pyear = years[i] + '';
                     if (years[i].includes('-')) {
                         pyear = pyear.replace('-', '20');
                     }
-
                     perCat['Year'] = pyear;
-
                     var cYearData = data.filter(function (m) { return String(m.Date).includes(years[i]); });
-
                     var cPositive = cYearData.filter(function (m) { return String(m.Sentiment_Label).toLowerCase() == 'positive'; });
-
                     perCat['Total % Positive'] = ((cPositive.length / cYearData.length) * 100).toFixed(2);
-
                     for (var j = 0; j < cats.length; j++) {
-
                         var cPos = cPositive.filter(function (m) { return m.Category == cats[j]; });
-
                         var cAll = cYearData.filter(function (m) { return m.Category == cats[j]; });
-
                         if (cPos.length > 0 && cAll.length > 0) {
                             perCat[cats[j] + ' % Positive'] = ((cPos.length / cAll.length) * 100).toFixed(2);
                         }
                         else {
                             perCat[cats[j] + ' % Positive'] = "0.00";
                         }
-
                     }
                 }
 
                 yearlyCatdata.push(perCat);
             }
-
             window.gaugeChartData = yearlyCatdata;
-
             render();
-
             var lineChart = Number($(($('#chart').find('svg')[0])).attr('width'));
-
             $(($('#chart').find('svg')[0])).attr('width', (lineChart + 10));
 
         }
 
-        /*function getAvgScoreCount(cMonthData) {
-            var totalScore = 0;
-            for (var i = 0; i < cMonthData.length; i++) {
-                totalScore = totalScore + cMonthData[i]['Sentiment_Score'];
-                if (totalScore > 0) {
-                  totalScore = (totalScore/ cMonthData.length)
-                  totalScore = ((totalScore + 1)/2)*100 
-                  totalScore = Math.round(totalScore *100)/100
-                  return totalScore
-                }
-                else {
-                  totalScore = (totalScore/ cMonthData.length)
-                  totalScore = ((Math.abs(totalScore) + 1)/2)*100 
-                  totalScore = Math.round(totalScore *100)/100
-                  return totalScore
-                }  
-            }  
-        }*/
-
+        
+        //average sentiment score for reviews 
         function getAvgScoreCount(cMonthData) {
- 
             var totalScore = 0;
             for (var i = 0; i < cMonthData.length; i++) {
-                totalScore = totalScore + Math.abs(cMonthData[i]['Sentiment_Score']);
-
-                
+                totalScore = totalScore + Math.abs(cMonthData[i]['Sentiment_Score']);   
             }
-            totalScore = (totalScore/ cMonthData.length) * 100
-            return totalScore
+            totalScore = ((totalScore/ cMonthData.length) * 100).toFixed(2);
+            return totalScore;
             
         }
 
-        /*function getAvgScoreCount(cMonthData) {
-            var totalScore = 0;
-            for (var i = 0; i < cMonthData.length; i++) {
-                totalScore = totalScore + cMonthData[i]['Sentiment_Score'];
-                if (totalScore > 0) {
-                  totalScore = (totalScore/ cMonthData.length)
-                  totalScore = ((totalScore + 1)/2)*100 
-                  totalScore = Math.round(totalScore *100)/100
-                  return totalScore
-                }
-                else {
-                  totalScore = (totalScore/ cMonthData.length)
-                  totalScore = ((Math.abs(totalScore) + 1)/2)*100 
-                  totalScore = Math.round(totalScore *100)/100
-                  return totalScore
-                }  
-            }  
-        }*/
-
+        //percentage of positive reviews
         function getPositivePercentage(cPositive, cMonthData) {
             if (cPositive.length > 0) {
-                return Number(((cPositive.length / cMonthData.length) * 100).toFixed(2));
-                //return (cPositive.length / cMonthData.length) * 100;
+                return Number(((cPositive.length / cMonthData.length) * 100).toFixed(0));
             }
             else
                 return 0;
@@ -564,9 +478,6 @@
       </div>
     </div>
     <hr>
-
-
-
 
           <div id="filter">
           <div class="col-sm-3 col-md-3 main">
@@ -761,14 +672,7 @@
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="../../assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    
-    
-
-
-    
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>  
   </body>
-  
-
 </html>
 

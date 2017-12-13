@@ -12,8 +12,9 @@ Rails.application.routes.draw do
 
   get 'about' => 'business_owners#about'
 
-  get 'home', to: 'home#index', as: :home
-  root 'home#index'
+ 
+
+  root :to => 'business_owners#home'
 
 #   get "business_owners/hello" => "your-controller#your/action"
 
