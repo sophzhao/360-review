@@ -6,6 +6,7 @@ class Sentence < ApplicationRecord
     scope :rankneg, -> { order(sentiment_score: :asc) }
     scope :positive, -> { where(sentiment_label: 'positive') }
     scope :negative, -> { where(sentiment_label: 'negative') }
+    scope :rankdate, -> { joins(:review).order('date DESC') }
 
 
     def self.overallScore 
@@ -29,4 +30,36 @@ class Sentence < ApplicationRecord
     		return result
     	end
     end
+
+    
+
+
+
+    def self.numSentences 
+        count = 0
+        reviews = Sentence.all
+        reviews.each do |sentiment|
+            count = count + 1
+        end
+        return count
+    end
+
+    def self.numPositive 
+        count = 0
+        reviews = Sentence.positive.all
+        reviews.each do |sentiment|
+            count = count + 1
+        end
+        return count
+    end
+
+    def self.numNegative 
+        count = 0
+        reviews = Sentence.negative.all
+        reviews.each do |sentiment|
+            count = count + 1
+        end
+        return count
+    end
+
 end

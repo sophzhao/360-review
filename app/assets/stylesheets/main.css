@@ -1,0 +1,62 @@
+﻿#power-gauge, #chart
+    {
+        float: left;
+    }
+
+#chart {
+    margin-left: 30px;
+    width: 800px !important;
+    height: 530px !important;
+}
+
+#power-gauge {
+    margin-left: 15px;
+    margin-top: 15px;
+    height: 500px !important;
+}
+#power-gauge{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          margin-bottom: 10px;
+     }
+@media all and (max-width:900px) {
+    #power-gauge, #chart
+    {
+        float: none;
+    }
+}
+/*@media all and (max-width:800px) 
+{
+    #main {
+        display: block;
+    }
+
+     #power-gauge{
+          display: grid;
+     }
+
+    #chart
+    {
+        display: block; 
+        float: none; 
+        width: 100%;
+    }
+}
+@media all and (min-width:1000px) 
+{
+    #main {
+        display: flex;
+    }
+
+    #power-gauge{
+        display: grid;grid-template-columns: repeat(2, 1fr);
+    }
+
+    #chart
+    {
+        display: block; 
+        float: none; 
+        width: 100%;
+    }
+}*/
+

@@ -6872,6 +6872,7 @@ button.close {
   float: left;
   margin-top: 20px;
   margin-left: 14px;
+  margin-bottom: 0px;
 }
 
 #dashboard #filter {
@@ -6890,6 +6891,10 @@ button.close {
 
 #login{
   padding-top: 150px;
+}
+
+#image {
+  height: 200px;
 }
 
 #dashboard {
@@ -6988,6 +6993,41 @@ footer {
   margin-left: 50px;
   margin-right: 50px;
 }
+
+#summary {
+  margin-left: 250px;
+}
+
+.titleG {
+  font-weight: bolder;
+}
+
+#gauge0 .titleG {
+  margin-left: 30px !important;
+}
+
+#gauge1 .titleG {
+  margin-left: 30px !important;
+}
+
+#gauge2 .titleG {
+  margin-left: 30px !important;
+}
+
+#gauge3 .titleG {
+  margin-left: 30px !important;
+}
+
+#gauge5 .titleG {
+  margin-left: 30px !important;
+}
+
+.gauge {
+  height: 120px !important;
+  text-align: center !important;
+}
+
+
 
 
 
